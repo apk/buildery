@@ -1,0 +1,9 @@
+set -ex
+rm -rf nginx-1.8.1 || true
+tar xzf nginx-1.8.1.tar.gz
+p="`pwd`"
+cd nginx-1.8.1
+./configure --prefix=/usr/local/nginx --with-http_ssl_module --with-ipv6 --with-openssl="$p"/openssl-1.0.2g
+make
+echo make -n install
+echo sudo make install

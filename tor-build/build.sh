@@ -3,15 +3,15 @@
 
 set -x
 
-opssl=1.0.2g
-opsha1=36af23887402a5ea4ebef91df8e61654906f58f2
+opssl=1.0.2h
+opsha256=1d4007e53aad94a5b2002fe045ee7bb0b3d98f1a47f8b2bc851dcd1c74332919
 
 test -r openssl-$opssl.tar.gz || \
   wget http://www.openssl.org/source/openssl-$opssl.tar.gz || exit 1
 
-sha1=`sha1sum openssl-$opssl.tar.gz | awk '{print $1}'`
+sha256=`sha256sum openssl-$opssl.tar.gz | awk '{print $1}'`
 
-test X"$sha1" = X$opsha1 || exit 1
+test X"$sha256" = X$opsha256 || exit 1
 
 P=`pwd`/local
 

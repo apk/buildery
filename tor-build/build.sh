@@ -3,8 +3,8 @@
 
 set -x
 
-opssl=1.0.2h
-opsha256=1d4007e53aad94a5b2002fe045ee7bb0b3d98f1a47f8b2bc851dcd1c74332919
+opssl=1.0.2j
+opsha256=e7aff292be21c259c6af26469c7a9b3ba26e9abaaffd325e3dccc9785256c431
 
 test -r openssl-$opssl.tar.gz || \
   wget http://www.openssl.org/source/openssl-$opssl.tar.gz || exit 1
@@ -29,7 +29,7 @@ if test X"`test -s sslvers && cat sslvers`" != X"$opssl"; then
 
 fi
 
-test -d tor || git clone -b release-0.2.7 https://git.torproject.org/tor.git || exit 1
+test -d tor || git clone -b release-0.2.8 https://git.torproject.org/tor.git || exit 1
 
 (cd tor && \
    git clean -fdx && \

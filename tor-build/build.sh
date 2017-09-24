@@ -3,8 +3,8 @@
 
 set -x
 
-opssl=1.0.2k
-opsha256=6b3977c61f2aedf0f96367dcfb5c6e578cf37e7b8d913b4ecb6643c3cb88d8c0
+opssl=1.0.2l
+opsha256=ce07195b659e75f4e1db43552860070061f156a98bb37b672b101ba6e3ddf30c
 
 test -r openssl-$opssl.tar.gz || \
   wget http://www.openssl.org/source/openssl-$opssl.tar.gz || exit 1

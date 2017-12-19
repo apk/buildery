@@ -29,7 +29,7 @@ if test X"`test -s sslvers && cat sslvers`" != X"$opssl"; then
 
 fi
 
-test -d tor || git clone -b release-0.2.9 https://git.torproject.org/tor.git || exit 1
+test -d tor || git clone -b release-0.3.2 https://git.torproject.org/tor.git || exit 1
 
 (cd tor && \
    git clean -fdx && \

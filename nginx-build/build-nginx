@@ -4,7 +4,7 @@ rm -rf nginx-$vers || true
 tar xzf nginx-$vers.tar.gz
 p="`pwd`"
 cd nginx-$vers
-./configure --prefix=/usr/local/nginx --with-http_ssl_module --with-openssl="$p"/openssl-1.0.2n
+./configure --prefix=/usr/local/nginx --with-http_ssl_module --with-http_v2_module --with-openssl="$p"/openssl-1.0.2n
 make
-echo make -n install
-echo sudo make install
+echo make -C nginx-$vers -n install
+echo sudo make -C nginx-$vers install

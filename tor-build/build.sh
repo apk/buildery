@@ -38,4 +38,10 @@ test -d tor || git clone -b currents/rel https://github.com/apk/tor.git || exit 
    make
 ) || exit 1
 
+mkdir -p out || exit 1
+cp tor/src/app/tor out/tor.new || exit 1
+mv out/tor.new out/tor || exit 1
+
+echo ok
+
 exit
